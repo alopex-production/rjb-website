@@ -383,3 +383,11 @@ body.motion-ready .topbar{
   .owner-points{padding-top:18px!important}.owner-points .point-img{width:100%!important}
   .program-grid article{min-height:195px;padding:27px 12px}
 }
+
+/* Ver.3.6.1 — mobile owner name safe inset */
+@media (max-width:900px){
+  .owner-name{left:22px!important;}
+}
+@media (max-width:430px){
+  .owner-name{left:22px!important;width:44%!important;}
+}

@@ -1,5 +1,15 @@
 
 document.addEventListener('DOMContentLoaded', () => {
+  // Ver.3.7 — original Rjb hero slideshow
+  const heroSlides=[...document.querySelectorAll('.hero-slide')];
+  if(heroSlides.length>1){
+    let heroIndex=0;
+    setInterval(()=>{
+      heroSlides[heroIndex].classList.remove('is-active');
+      heroIndex=(heroIndex+1)%heroSlides.length;
+      heroSlides[heroIndex].classList.add('is-active');
+    },5000);
+  }
   const menu=document.querySelector('.menu');
   const drawer=document.querySelector('.drawer');
   const close=document.querySelector('.close');

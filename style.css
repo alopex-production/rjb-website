@@ -37,3 +37,24 @@ main,footer{margin-left:68px}
   .hero{height:calc(100vh - 70px)}
   .menu{display:block;margin-left:auto}
 }
+
+/* Ver.3.1 — official SNS + side placement + menu animation */
+.left-rail,.right-rail{transform:none!important}
+.line-side{font-size:8px!important;letter-spacing:.04em;border:1px solid #111;border-radius:50%;width:34px;height:34px;display:flex;align-items:center;justify-content:center}
+.menu{position:relative;height:58px;cursor:pointer}
+.menu span{display:block;transition:transform .35s ease,opacity .25s ease,width .35s ease;transform-origin:center}
+.menu:hover span:nth-child(1){transform:translateX(5px)}
+.menu:hover span:nth-child(3){transform:translateX(-5px)}
+.menu.is-open span:nth-child(1){transform:translateY(10px) rotate(45deg)}
+.menu.is-open span:nth-child(2){opacity:0;transform:scaleX(0)}
+.menu.is-open span:nth-child(3){transform:translateY(-10px) rotate(-45deg)}
+.current-nav a{position:relative;overflow:hidden}
+.current-nav a::after{content:"";position:absolute;left:50%;bottom:0;width:0;height:3px;background:#ef9bc2;transform:translateX(-50%);transition:width .3s ease}
+.current-nav a:hover::after,.current-nav a.active::after{width:58%}
+.current-nav a strong,.current-nav a small{transition:color .25s ease,transform .25s ease}
+.current-nav a:hover strong{color:#ef9bc2;transform:translateY(-2px)}
+.drawer{transition:opacity .35s ease,visibility .35s ease}
+.drawer .drawer-inner{transition:transform .4s cubic-bezier(.22,.8,.25,1)}
+.drawer:not(.open) .drawer-inner{transform:translateX(35px)}
+.drawer.open .drawer-inner{transform:translateX(0)}
+@media(max-width:900px){.line-side{display:none}}

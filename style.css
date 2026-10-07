@@ -58,3 +58,36 @@ main,footer{margin-left:68px}
 .drawer:not(.open) .drawer-inner{transform:translateX(35px)}
 .drawer.open .drawer-inner{transform:translateX(0)}
 @media(max-width:900px){.line-side{display:none}}
+
+/* Ver.3.2 — scroll/reveal animations (desktop + mobile) */
+html{scroll-behavior:smooth}
+body.motion-ready .motion-item{
+  opacity:0;
+  transform:translateY(38px);
+  transition:opacity .85s cubic-bezier(.22,.8,.25,1),
+             transform .85s cubic-bezier(.22,.8,.25,1);
+  will-change:opacity,transform;
+}
+body.motion-ready .motion-item.from-left{transform:translateX(-42px)}
+body.motion-ready .motion-item.from-right{transform:translateX(42px)}
+body.motion-ready .motion-item.is-visible{
+  opacity:1;
+  transform:translate(0,0);
+}
+body.motion-ready .motion-delay-1{transition-delay:.08s}
+body.motion-ready .motion-delay-2{transition-delay:.16s}
+body.motion-ready .motion-delay-3{transition-delay:.24s}
+body.motion-ready .topbar{
+  animation:headerDrop .7s cubic-bezier(.22,.8,.25,1) both;
+}
+@keyframes headerDrop{
+  from{opacity:0;transform:translateY(-22px)}
+  to{opacity:1;transform:translateY(0)}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  body.motion-ready .motion-item,
+  body.motion-ready .topbar{
+    opacity:1!important;transform:none!important;transition:none!important;animation:none!important
+  }
+}

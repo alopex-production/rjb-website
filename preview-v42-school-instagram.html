@@ -356,6 +356,28 @@ html.js-v40 .v40-visible{opacity:1!important;transform:translateY(0)!important}
 @media(max-width:760px){.intro-media>.intro-overlap{height:auto;aspect-ratio:4/5}}
 .intro-media>.photoblock>img[src="assets/images/rjb-approved-01.jpg"]{object-position:center center}
 </style>
+<style id="rjb-pc-concept-balance-v1">
+/* PC-only concept polish: preserve approved mobile presentation and restored imagery. */
+@media (min-width: 851px){
+  .intro .intro-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:clamp(38px,5.5vw,88px);align-items:center}
+  .intro .intro-media{min-width:0;min-height:0;padding:36px 10% 9% 3%}
+  .intro .intro-media>.photoblock{height:auto;aspect-ratio:4/5;max-height:620px}
+  .intro .intro-media>.photoblock>img{width:100%;height:100%;object-fit:cover}
+  .intro .intro-media>.intro-overlap{width:44%;height:auto;aspect-ratio:4/5;max-height:265px;bottom:0;right:0;border-width:clamp(8px,1vw,13px)}
+  .intro .intro-roundel{top:0;left:0}
+  .intro .intro-copy{min-width:0;padding:22px 0}
+  .intro .intro-copy .section-title{font-size:clamp(60px,6.2vw,100px);line-height:.94;margin:16px 0 28px}
+  .intro .intro-copy .section-jp{font-size:clamp(25px,2.5vw,37px);line-height:1.75}
+  .intro .intro-body{margin-left:clamp(0px,2vw,32px);max-width:480px}
+}
+@media (min-width:851px) and (max-width:1100px){
+  .intro .intro-grid{column-gap:clamp(24px,3.5vw,45px)}
+  .intro .intro-media{padding:22px 9% 9% 2%}
+  .intro .intro-copy .section-title{font-size:clamp(54px,6.5vw,75px)}
+  .intro .intro-copy .section-jp{font-size:clamp(23px,2.7vw,30px)}
+  .intro .intro-body{margin-left:0}
+}
+</style>
 </head>
 <body>
 <div class="preview">ALOPEX × Rjb — CREATIVE DIRECTION V4.2 — CINEMATIC 16:9 / 非公開デザイン確認稿</div>

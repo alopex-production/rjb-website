@@ -74,10 +74,33 @@ html{scroll-behavior:smooth;scroll-padding-top:92px}body{margin:0;background:var
 .hero-main-photo.is-drag-over{outline:5px solid #d77bab;outline-offset:-5px}
 @media(max-width:760px){.preview-video-tool{top:12px;left:12px;padding:10px 12px;max-width:calc(100% - 24px)}.preview-video-tool strong{font-size:11px}.preview-video-tool p{font-size:10px;margin-bottom:6px}.preview-video-tool label{font-size:10px;padding:7px 10px}.preview-video-tool .file-status{margin-top:4px}.preview-video-tool.is-loaded{max-width:190px}}
 
+
+/* V3.2 — cinematic widescreen hero: uncropped 16:9 video + editorial copy */
+.hero{display:flex;flex-direction:column;height:auto;min-height:0;background:var(--paper)}
+.hero-right{order:0;grid-column:auto;grid-row:auto;position:relative;width:100%;height:auto;aspect-ratio:16/9;overflow:hidden;background:#2a1e26}
+.hero-main-photo{position:absolute;inset:0;background:#34242c}
+.hero-main-photo>img{object-fit:contain;object-position:center;background:#34242c}
+.hero-main-photo>.hero-film,.hero-main-photo.is-playing>.hero-film{object-fit:contain;object-position:center;background:#241d22}
+.hero-main-photo:after{background:linear-gradient(180deg,rgba(35,18,29,.12),transparent 18%,transparent 78%,rgba(35,18,29,.15))}
+.hero-left{order:1;grid-column:auto;grid-row:auto;min-height:0;display:block;padding:clamp(55px,7vw,110px) max(6vw,calc((100vw - 1240px)/2)) clamp(65px,7vw,110px)}
+.hero-main{max-width:1200px;display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,.65fr);column-gap:clamp(24px,5vw,90px);align-items:center}
+.hero-topline{grid-column:1/-1;margin-bottom:22px}
+.hero h1{grid-column:1;grid-row:2/6;white-space:normal;font-size:clamp(35px,4.1vw,65px);line-height:1.5;margin:0}
+.hero-lead{grid-column:2;grid-row:2;margin:0 0 16px;line-height:2.2}
+.hero-proof{grid-column:2;grid-row:3;margin:0 0 22px}
+.hero-actions{grid-column:2;grid-row:4}
+.hero-bottom{left:auto;right:max(6vw,calc((100vw - 1240px)/2));bottom:20px}
+.hero-left:before{font-size:clamp(170px,21vw,340px);left:-1vw;bottom:-3vw}
+.hero-poster,.hero-arch,.hero-vertical{display:none!important}
+.film-pause{right:24px;bottom:24px}
+.preview-video-tool{left:24px;top:24px}
+@media(max-width:900px){.hero-main{display:block}.hero h1{font-size:clamp(35px,6vw,56px);margin-bottom:25px}.hero-lead{margin-bottom:20px}.hero-proof{margin-bottom:22px}.hero-left{padding:55px 7vw 80px}.hero-bottom{right:7vw}}
+@media(max-width:760px){.hero-right{aspect-ratio:16/9;min-height:0;height:auto}.hero-main-photo>.hero-film{object-position:center}.hero-left{padding:42px 6vw 75px}.hero h1{font-size:clamp(29px,7.5vw,44px);line-height:1.5}.hero-topline{margin-bottom:18px}.preview-video-tool{left:10px;top:10px;max-width:calc(100% - 20px)}.film-pause{right:10px;bottom:10px}.hero-bottom{right:6vw}}
+
 </style>
 </head>
 <body>
-<div class="preview">ALOPEX × Rjb — CREATIVE DIRECTION V3.1 — VIDEO PREVIEW / 非公開デザイン確認稿</div>
+<div class="preview">ALOPEX × Rjb — CREATIVE DIRECTION V3.2 — CINEMATIC 16:9 / 非公開デザイン確認稿</div>
 <header class="site-header"><div class="container header-inner"><a class="brand" href="#top" aria-label="Rjb トップへ"><img class="brand-logo" src="https://rjb.chu.jp/img/common/logo_inner.png" alt="Rjb"><span class="brand-symbol" style="display:none">Rjb</span><span class="brand-desc">NAIL SALON<br>&amp; SCHOOL</span></a><nav class="main-nav" id="main-nav" aria-label="メインナビゲーション"><a href="#concept">CONCEPT</a><a href="#school">NAIL SCHOOL</a><a href="#salon">NAIL SALON</a><a href="#owner">OUR FOUNDER</a><a href="#voices">VOICES</a><a href="#faq">FAQ</a><a class="nav-cta" href="#contact">CONTACT <span aria-hidden="true">↗</span></a></nav><button type="button" class="menu-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="メニューを開く"><span></span><span></span></button></div></header>
 <main id="top">
 <!-- HERO -->
@@ -102,7 +125,7 @@ html{scroll-behavior:smooth;scroll-padding-top:92px}body{margin:0;background:var
 <!-- CTA -->
 <section class="contact" id="contact"><div class="container contact-grid"><div><div class="eyebrow">08 / THE NEXT STEP</div><div class="section-title en">Let's begin.</div><h2>これからの私に、<br>新しい選択肢を。</h2><p>ネイルスクールの見学・相談も、<br>サロンへのお問い合わせも。<br>最初の一歩は、ここから。</p></div><div class="contact-card"><div class="en">A small step, a new story.</div><p>「少し気になる」その気持ちから。<br>お気軽にお問い合わせください。</p><a class="button" href="https://page.line.me/xrp1972b?openQrModal=true" target="_blank" rel="noopener noreferrer">公式LINEで相談する <span class="arrow" aria-hidden="true">↗</span></a><a class="button outline" href="tel:0794424552">電話で問い合わせる <span class="arrow" aria-hidden="true">↗</span></a><p class="contact-caption">TEL：079-442-4552<br>※LINEの受付内容・予約導線は公開前に確認します。</p></div></div></section>
 </main>
-<footer class="footer"><div class="container"><div class="footer-main"><div class="footer-brand">Rjb<small>NAIL SALON &amp; SCHOOL</small></div><div class="footer-info"><div>〒676-0013 兵庫県高砂市荒井町蓮池3丁目5番9-2</div><div>TEL 079-442-4552</div><div>JNAネイル本部認定校</div></div></div><div class="footer-bottom"><div>© Rjb. ALL RIGHTS RESERVED.</div><div>DESIGN REVIEW V3.1 — PRIVATE / <a href="#top">BACK TO TOP ↑</a></div></div></div></footer>
+<footer class="footer"><div class="container"><div class="footer-main"><div class="footer-brand">Rjb<small>NAIL SALON &amp; SCHOOL</small></div><div class="footer-info"><div>〒676-0013 兵庫県高砂市荒井町蓮池3丁目5番9-2</div><div>TEL 079-442-4552</div><div>JNAネイル本部認定校</div></div></div><div class="footer-bottom"><div>© Rjb. ALL RIGHTS RESERVED.</div><div>DESIGN REVIEW V3.2 — PRIVATE / <a href="#top">BACK TO TOP ↑</a></div></div></div></footer>
 <div class="mobile-cta" aria-label="モバイル用お問い合わせ"><a href="#school">ネイルスクールを見る</a><a href="#contact">相談・お問い合わせ</a></div>
 <script>
 (()=>{'use strict';const logo=document.querySelector('.brand-logo');logo?.addEventListener('error',()=>{logo.style.display='none';const f=logo.nextElementSibling;if(f)f.style.display='block'});const t=document.querySelector('.menu-toggle'),n=document.querySelector('.main-nav');if(t&&n){const close=()=>{t.setAttribute('aria-expanded','false');t.setAttribute('aria-label','メニューを開く');n.classList.remove('open');document.body.classList.remove('menu-open')};t.addEventListener('click',()=>{const o=t.getAttribute('aria-expanded')!=='true';t.setAttribute('aria-expanded',String(o));t.setAttribute('aria-label',o?'メニューを閉じる':'メニューを開く');n.classList.toggle('open',o);document.body.classList.toggle('menu-open',o)});n.querySelectorAll('a').forEach(a=>a.addEventListener('click',close));document.addEventListener('keydown',e=>{if(e.key==='Escape')close()})}document.querySelectorAll('.photoblock img,.hero-main-photo img').forEach(img=>{img.addEventListener('error',()=>{img.style.display='none';const p=img.parentElement;p?.classList.add('image-unavailable')})});})();

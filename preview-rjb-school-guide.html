@@ -13,6 +13,30 @@
 .feature figure{margin:0}.feature img{display:block;object-position:center 35%;height:490px}
 .photo-credit{font-size:11px;color:#876c7a;line-height:1.6;margin-top:8px}
 @media(max-width:760px){.hero-photo-layout,.photo-story{grid-template-columns:1fr;gap:28px}.hero{padding:58px 0 68px}.hero-photo{aspect-ratio:4/3}.hero-photo-layout h1{font-size:clamp(35px,9vw,52px);margin:16px 0}.photo-story{margin-top:30px}.photo-story figure{aspect-ratio:16/10}.feature img{height:auto;aspect-ratio:4/4.5;object-fit:cover}.hero-photo figcaption{font-size:15px}}
+
+/* PC layout refinement V2: larger editorial photography and tighter rhythm. Mobile unchanged. */
+@media (min-width: 761px){
+  .wrap{max-width:1400px;padding-left:clamp(28px,4vw,64px);padding-right:clamp(28px,4vw,64px)}
+  .hero{padding:clamp(62px,6vw,90px) 0 clamp(68px,6vw,95px)}
+  .hero-photo-layout{grid-template-columns:minmax(0,.83fr) minmax(0,1.17fr);gap:clamp(34px,4vw,65px)}
+  .hero-photo-layout h1{font-size:clamp(42px,4.2vw,65px);line-height:1.48;letter-spacing:.035em;margin:20px 0 26px}
+  .hero-photo{aspect-ratio:1.32;box-shadow:0 22px 55px #6b35401c}
+  .hero-photo img{object-position:center 44%}
+  .hero p{max-width:530px}
+  .section{padding:clamp(70px,7vw,100px) 0}
+  .photo-story{grid-template-columns:minmax(0,1.18fr) minmax(0,.82fr);gap:clamp(34px,4vw,66px);margin-top:55px}
+  .photo-story figure{aspect-ratio:1.55}
+  .photo-story h3{font-size:clamp(30px,3vw,44px)}
+  .feature{grid-template-columns:minmax(0,1.13fr) minmax(0,.87fr);gap:clamp(36px,5vw,78px)}
+  .feature img{height:auto;aspect-ratio:1.15;object-fit:cover;object-position:center 43%}
+  .feature .heading{font-size:clamp(36px,3.9vw,54px)}
+}
+@media (min-width:761px) and (max-width:1050px){
+  .hero-photo-layout{grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:30px}
+  .hero-photo-layout h1{font-size:clamp(37px,4.4vw,49px)}
+  .feature{grid-template-columns:1fr 1fr;gap:35px}
+  .feature img{aspect-ratio:1}
+}
 </style></head><body><header class="top"><div class="wrap"><a class="logo" href="preview-v42-school-instagram.html" aria-label="Rjb トップへ">Rjb</a><a class="topnav" href="preview-v42-school-instagram.html">← トップページに戻る</a></div></header><main>
 <section class="hero"><div class="wrap hero-photo-layout"><div class="hero-copy"><div class="kicker">RJB NAIL SCHOOL / SCHOOL GUIDE</div><h1>資格の先にある、<br><em>自信と信頼。</em></h1><p>「私にもできるかな」から、「私にもできる」へ。<br>年齢や経験にとらわれず、基礎から丁寧に学び、自分らしい未来へ進むためのネイルスクール。</p><a class="btn" href="#consult">スクール見学・相談について</a></div><figure class="hero-photo"><img src="assets/images/rjb-approved-01.jpg" width="1199" height="1312" alt="ネイルスクールで講師が受講生に寄り添って指導するイメージ" fetchpriority="high"><figcaption>Learn beautifully.</figcaption></figure></div></section>
 <section class="section"><div class="wrap"><div class="kicker">01 / OUR PHILOSOPHY</div><h2 class="heading reveal">資格は、未来の自分への財産。</h2><p class="lead reveal">ネイルは資格がなくても仕事にできる時代です。だからこそ、どこで学び、誰から学び、どんな技術を身につけるかが大切だとRjbは考えています。</p><p class="quote reveal">技術に自信を。仕事に誇りを。<br>お客様から選ばれ続けるネイリストへ。</p><p>資格はただの肩書きではなく、努力してきた証。そこに至る過程で磨く知識と技術が、自分自身を信じる力とお客様からの信頼につながります。</p></div></section>

@@ -6,7 +6,7 @@
 <meta name="robots" content="noindex,nofollow">
 <meta name="theme-color" content="#fcf9f7">
 <meta name="description" content="Rjb｜兵庫県高砂市のネイルサロン＆ネイルスクール。自分らしく、美しく、学ぶ。その先の人生まで。非公開デザイン確認稿。">
-<title>Rjb | Nail Salon & School — Creative Direction V2.0</title>
+<title>Rjb | Nail Salon & School — Creative Direction V3.1</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Noto+Sans+JP:wght@300;400;500;600&family=Noto+Serif+JP:wght@400;500;600&display=swap" rel="stylesheet">
@@ -56,14 +56,32 @@ html{scroll-behavior:smooth;scroll-padding-top:92px}body{margin:0;background:var
 .hero-main-photo.video-missing .film-fallback-note{display:block}
 @media (prefers-reduced-motion:reduce){.hero-film{display:none!important}.film-pause{display:none!important}}
 @media(max-width:760px){.hero-main-photo>.hero-film{object-position:center 40%}.film-pause{bottom:12px;right:14px;width:40px;height:40px}.film-fallback-note{bottom:8px;right:8px;font-size:8px}}
+
+/* Rjb V3 interactive private media review — local file stays on viewer's device */
+.preview-video-tool{position:absolute;z-index:12;left:22px;top:22px;max-width:min(350px,calc(100% - 44px));padding:16px 18px;background:rgba(255,252,251,.96);border:1px solid rgba(255,255,255,.8);box-shadow:0 16px 48px rgba(67,39,51,.16);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-radius:12px;color:#49313e;font:400 12px/1.65 var(--body);letter-spacing:.025em}
+.preview-video-tool strong{font:500 13px/1.6 var(--body);display:block;letter-spacing:.05em;margin-bottom:3px}
+.preview-video-tool p{font-size:11px;line-height:1.7;margin:0 0 10px;color:#74626a}
+.preview-video-tool input{position:absolute;width:1px;height:1px;padding:0;margin:0;opacity:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+.preview-video-tool label{display:inline-flex;align-items:center;gap:8px;padding:9px 14px;border-radius:100px;color:#fff;background:var(--rose);font:500 12px/1.2 var(--body);letter-spacing:.045em;cursor:pointer;transition:background .2s}
+.preview-video-tool label:hover{background:var(--wine)}
+.preview-video-tool input:focus-visible+label{outline:3px solid #63384e;outline-offset:3px}
+.preview-video-tool .file-status{display:block;margin-top:8px;font-size:10px;line-height:1.6;color:#78666f}
+.preview-video-tool.is-loaded{background:rgba(255,250,251,.83);max-width:235px;padding:10px 12px}
+.preview-video-tool.is-loaded .preview-intro{display:none}
+.preview-video-tool.is-loaded strong{font-size:11px;margin-bottom:5px}
+.preview-video-tool.is-loaded label{font-size:10px;padding:8px 11px}
+.preview-video-tool.is-loaded .file-status{white-space:nowrap;text-overflow:ellipsis;overflow:hidden}
+.hero-main-photo.is-drag-over{outline:5px solid #d77bab;outline-offset:-5px}
+@media(max-width:760px){.preview-video-tool{top:12px;left:12px;padding:10px 12px;max-width:calc(100% - 24px)}.preview-video-tool strong{font-size:11px}.preview-video-tool p{font-size:10px;margin-bottom:6px}.preview-video-tool label{font-size:10px;padding:7px 10px}.preview-video-tool .file-status{margin-top:4px}.preview-video-tool.is-loaded{max-width:190px}}
+
 </style>
 </head>
 <body>
-<div class="preview">ALOPEX × Rjb — CREATIVE DIRECTION V3.0 — VIDEO INTEGRATION / 非公開デザイン確認稿</div>
+<div class="preview">ALOPEX × Rjb — CREATIVE DIRECTION V3.1 — VIDEO PREVIEW / 非公開デザイン確認稿</div>
 <header class="site-header"><div class="container header-inner"><a class="brand" href="#top" aria-label="Rjb トップへ"><img class="brand-logo" src="https://rjb.chu.jp/img/common/logo_inner.png" alt="Rjb"><span class="brand-symbol" style="display:none">Rjb</span><span class="brand-desc">NAIL SALON<br>&amp; SCHOOL</span></a><nav class="main-nav" id="main-nav" aria-label="メインナビゲーション"><a href="#concept">CONCEPT</a><a href="#school">NAIL SCHOOL</a><a href="#salon">NAIL SALON</a><a href="#owner">OUR FOUNDER</a><a href="#voices">VOICES</a><a href="#faq">FAQ</a><a class="nav-cta" href="#contact">CONTACT <span aria-hidden="true">↗</span></a></nav><button type="button" class="menu-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="メニューを開く"><span></span><span></span></button></div></header>
 <main id="top">
 <!-- HERO -->
-<section class="hero" aria-label="Rjb ブランドメッセージ"><div class="hero-right"><div class="hero-main-photo" id="hero-media"><img src="https://rjb.chu.jp/img/index/mainvisual_sm_01.jpg" alt="Rjbのネイルイメージ" fetchpriority="high"><video class="hero-film" id="rjb-hero-video" autoplay muted loop playsinline preload="metadata" poster="https://rjb.chu.jp/img/index/mainvisual_sm_01.jpg" aria-label="Rjbブランドムービー"><source src="assets/rjb-hero-web.mp4" type="video/mp4"></video><div class="film-fallback-note" id="film-fallback-note" aria-live="polite">MOVIE COMING SOON — PHOTO PREVIEW</div><button type="button" class="film-pause" id="film-play-toggle" aria-label="映像を一時停止" aria-pressed="false">Ⅱ</button></div><div class="hero-arch"></div><span class="hero-vertical">NAIL SALON &amp; SCHOOL — TAKASAGO</span><div class="hero-poster" aria-hidden="true"><div class="photoblock"><img src="https://rjb.chu.jp/img/index/mainvisual_sm_04.jpg" alt=""></div><p>Beauty is your story.</p></div></div><div class="hero-left"><div class="hero-main"><div class="hero-topline"><span class="rule"></span><span class="eyebrow">FOR YOUR BEAUTIFUL FUTURE</span></div><h1>好きなことが、<br><em>これからの私を</em><br>輝かせる。</h1><p class="hero-lead">指先から、美しさと自信を。<br>学びから、人生に新しい選択肢を。<br>Rjbは、あなたの「これから」に寄り添います。</p><div class="hero-proof"><span>JNAネイル本部認定校 × ネイルサロン</span></div><div class="hero-actions"><a class="button" href="#school">ネイルスクールを見る <span class="arrow" aria-hidden="true">↗</span></a><a class="button outline" href="#salon">サロンを見る <span class="arrow" aria-hidden="true">↗</span></a></div></div><div class="hero-bottom">SCROLL TO DISCOVER</div></div></section>
+<section class="hero" aria-label="Rjb ブランドメッセージ"><div class="hero-right"><div class="hero-main-photo" id="hero-media"><img src="https://rjb.chu.jp/img/index/mainvisual_sm_01.jpg" alt="Rjbのネイルイメージ" fetchpriority="high"><video class="hero-film" id="rjb-hero-video" autoplay muted loop playsinline preload="metadata" poster="https://rjb.chu.jp/img/index/mainvisual_sm_01.jpg" aria-label="Rjbブランドムービー"><source src="assets/rjb-hero-web.mp4" type="video/mp4"></video><div class="film-fallback-note" id="film-fallback-note" aria-live="polite">PHOTO PREVIEW</div><div class="preview-video-tool" id="preview-video-tool"><strong>🎬 Rjb 映像プレビュー</strong><p class="preview-intro">お手元の「Timeline 1.mp4」を選ぶと、このトップ画面に映像が流れます。外部へのアップロードはありません。</p><input id="video-preview-file" type="file" accept="video/mp4,video/quicktime,video/*" aria-label="プレビューに使う映像を選択"><label for="video-preview-file">映像ファイルを選んで再生 <span aria-hidden="true">↗</span></label><span id="preview-video-status" class="file-status" aria-live="polite">現在：写真プレビュー</span></div><button type="button" class="film-pause" id="film-play-toggle" aria-label="映像を一時停止" aria-pressed="false">Ⅱ</button></div><div class="hero-arch"></div><span class="hero-vertical">NAIL SALON &amp; SCHOOL — TAKASAGO</span><div class="hero-poster" aria-hidden="true"><div class="photoblock"><img src="https://rjb.chu.jp/img/index/mainvisual_sm_04.jpg" alt=""></div><p>Beauty is your story.</p></div></div><div class="hero-left"><div class="hero-main"><div class="hero-topline"><span class="rule"></span><span class="eyebrow">FOR YOUR BEAUTIFUL FUTURE</span></div><h1>好きなことが、<br><em>これからの私を</em><br>輝かせる。</h1><p class="hero-lead">指先から、美しさと自信を。<br>学びから、人生に新しい選択肢を。<br>Rjbは、あなたの「これから」に寄り添います。</p><div class="hero-proof"><span>JNAネイル本部認定校 × ネイルサロン</span></div><div class="hero-actions"><a class="button" href="#school">ネイルスクールを見る <span class="arrow" aria-hidden="true">↗</span></a><a class="button outline" href="#salon">サロンを見る <span class="arrow" aria-hidden="true">↗</span></a></div></div><div class="hero-bottom">SCROLL TO DISCOVER</div></div></section>
 <div class="marquee" aria-hidden="true"><div class="marquee-inner">Beauty, confidence, and a new chapter <b>✦</b> Beauty, confidence, and a new chapter <b>✦</b> Beauty, confidence, and a new chapter</div></div>
 <!-- CONCEPT, fully redesigned from text-only -->
 <section class="section intro" id="concept"><div class="container intro-grid"><div class="intro-media"><div class="photoblock"><img src="https://rjb.chu.jp/img/index/mainvisual_sm_02.jpg" alt="Rjbのネイルデザイン・施術イメージ" loading="lazy"></div><div class="photoblock intro-overlap"><img src="https://rjb.chu.jp/img/index/mainvisual_sm_05.jpg" alt="美しい指先のイメージ" loading="lazy"></div><div class="intro-roundel" aria-hidden="true">love<br>your life</div></div><div class="intro-copy"><div class="eyebrow">01 / OUR PHILOSOPHY</div><div class="section-title en">Beauty<br><i>with purpose.</i></div><h2 class="section-jp">いくつになっても、<br><strong>自分の「好き」を、</strong><br>あきらめない。</h2><div class="intro-body"><p>ネイルで気持ちが明るくなる日。<br>新しい技術を身につけ、自信が芽生える日。<br>そして、誰かを笑顔にする仕事に出会う日。</p><p>Rjbはネイルサロンとスクール、その両方を通して、一人ひとりの人生に寄り添ってきました。</p><div class="intro-rule"></div><span class="intro-footnote">Your life. Your beautiful choice.</span></div></div></div></section>
@@ -84,7 +102,7 @@ html{scroll-behavior:smooth;scroll-padding-top:92px}body{margin:0;background:var
 <!-- CTA -->
 <section class="contact" id="contact"><div class="container contact-grid"><div><div class="eyebrow">08 / THE NEXT STEP</div><div class="section-title en">Let's begin.</div><h2>これからの私に、<br>新しい選択肢を。</h2><p>ネイルスクールの見学・相談も、<br>サロンへのお問い合わせも。<br>最初の一歩は、ここから。</p></div><div class="contact-card"><div class="en">A small step, a new story.</div><p>「少し気になる」その気持ちから。<br>お気軽にお問い合わせください。</p><a class="button" href="https://page.line.me/xrp1972b?openQrModal=true" target="_blank" rel="noopener noreferrer">公式LINEで相談する <span class="arrow" aria-hidden="true">↗</span></a><a class="button outline" href="tel:0794424552">電話で問い合わせる <span class="arrow" aria-hidden="true">↗</span></a><p class="contact-caption">TEL：079-442-4552<br>※LINEの受付内容・予約導線は公開前に確認します。</p></div></div></section>
 </main>
-<footer class="footer"><div class="container"><div class="footer-main"><div class="footer-brand">Rjb<small>NAIL SALON &amp; SCHOOL</small></div><div class="footer-info"><div>〒676-0013 兵庫県高砂市荒井町蓮池3丁目5番9-2</div><div>TEL 079-442-4552</div><div>JNAネイル本部認定校</div></div></div><div class="footer-bottom"><div>© Rjb. ALL RIGHTS RESERVED.</div><div>DESIGN REVIEW V3.0 — PRIVATE / <a href="#top">BACK TO TOP ↑</a></div></div></div></footer>
+<footer class="footer"><div class="container"><div class="footer-main"><div class="footer-brand">Rjb<small>NAIL SALON &amp; SCHOOL</small></div><div class="footer-info"><div>〒676-0013 兵庫県高砂市荒井町蓮池3丁目5番9-2</div><div>TEL 079-442-4552</div><div>JNAネイル本部認定校</div></div></div><div class="footer-bottom"><div>© Rjb. ALL RIGHTS RESERVED.</div><div>DESIGN REVIEW V3.1 — PRIVATE / <a href="#top">BACK TO TOP ↑</a></div></div></div></footer>
 <div class="mobile-cta" aria-label="モバイル用お問い合わせ"><a href="#school">ネイルスクールを見る</a><a href="#contact">相談・お問い合わせ</a></div>
 <script>
 (()=>{'use strict';const logo=document.querySelector('.brand-logo');logo?.addEventListener('error',()=>{logo.style.display='none';const f=logo.nextElementSibling;if(f)f.style.display='block'});const t=document.querySelector('.menu-toggle'),n=document.querySelector('.main-nav');if(t&&n){const close=()=>{t.setAttribute('aria-expanded','false');t.setAttribute('aria-label','メニューを開く');n.classList.remove('open');document.body.classList.remove('menu-open')};t.addEventListener('click',()=>{const o=t.getAttribute('aria-expanded')!=='true';t.setAttribute('aria-expanded',String(o));t.setAttribute('aria-label',o?'メニューを閉じる':'メニューを開く');n.classList.toggle('open',o);document.body.classList.toggle('menu-open',o)});n.querySelectorAll('a').forEach(a=>a.addEventListener('click',close));document.addEventListener('keydown',e=>{if(e.key==='Escape')close()})}document.querySelectorAll('.photoblock img,.hero-main-photo img').forEach(img=>{img.addEventListener('error',()=>{img.style.display='none';const p=img.parentElement;p?.classList.add('image-unavailable')})});})();
@@ -109,4 +127,31 @@ html{scroll-behavior:smooth;scroll-padding-top:92px}body{margin:0;background:var
  v.play().catch(()=>{});
 })();
 </script>
+
+<!-- Interactive private review: the file is read locally through a blob URL, never sent to the server -->
+<script>
+(()=>{'use strict';
+ const input=document.getElementById('video-preview-file'),tool=document.getElementById('preview-video-tool'),status=document.getElementById('preview-video-status'),v=document.getElementById('rjb-hero-video'),media=document.getElementById('hero-media');
+ if(!input||!tool||!status||!v||!media)return;
+ let activeBlobUrl=null;
+ const setFile=async(file)=>{
+  if(!file)return;
+  if(!file.type.startsWith('video/') && !/\.(mp4|mov|m4v|webm)$/i.test(file.name)){status.textContent='動画ファイルを選択してください';return;}
+  if(activeBlobUrl)URL.revokeObjectURL(activeBlobUrl);
+  activeBlobUrl=URL.createObjectURL(file);
+  v.pause();v.src=activeBlobUrl;v.muted=true;v.loop=true;v.playsInline=true;v.preload='auto';v.load();
+  tool.classList.add('is-loaded');
+  status.textContent=file.name+' をローカル再生中';
+  media.classList.remove('video-missing');
+  try{await v.play();media.classList.add('has-video','is-playing');}catch(e){status.textContent='再生ボタンを押すと映像が流れます';media.classList.add('has-video','is-playing');}
+ };
+ input.addEventListener('change',()=>setFile(input.files&&input.files[0]));
+ media.addEventListener('dragover',e=>{if([...e.dataTransfer.types].includes('Files')){e.preventDefault();media.classList.add('is-drag-over')}});
+ media.addEventListener('dragleave',()=>media.classList.remove('is-drag-over'));
+ media.addEventListener('drop',e=>{e.preventDefault();media.classList.remove('is-drag-over');setFile(e.dataTransfer.files?.[0])});
+ v.addEventListener('error',()=>{if(activeBlobUrl)status.textContent='この形式を再生できません。MP4（H.264）をご確認ください。'});
+ window.addEventListener('pagehide',()=>{if(activeBlobUrl)URL.revokeObjectURL(activeBlobUrl)},{once:true});
+})();
+</script>
+
 </body></html>
